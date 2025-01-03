@@ -164,29 +164,26 @@ footer > a {
     width: 50%;
     height: 80%;
     color: var(--font-color); /* Set text color */
-    position: relative; /* Ensure the container doesn't shift */
 }
 
-/* Add the blinking cursor without affecting the layout */
-div.textCont::after {
-    content: "|";
-    position: absolute; /* Remove from document flow */
-    bottom: 0; /* Align it to the bottom */
-    left: 0; /* Position at the left side */
-    animation: blinkt 1s linear infinite;
+/* New black container for mobile */
+.textCont-wrapper {
+    background-color: transparent; /* Default transparent */
+    padding: 0; /* No padding by default */
+    border-radius: 0; /* No border-radius by default */
+    color: var(--font-color); /* Set text color */
 }
 
-@keyframes blinkt {
-    0% {
-        opacity: 0;
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    .textCont-wrapper {
+        background-color: black; /* Black background for mobile */
+        padding: 20px; /* Add padding around the text on mobile */
+        border-radius: 10px; /* Rounded corners on mobile */
+        width: 90%; /* Make the container wider on mobile */
+        margin: 0 auto; /* Center the container */
     }
-    49.9% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    99.9% {
-        opacity: 1;
+    .textCont {
+        font-size: 120%; /* Adjust the font size for smaller screens */
     }
 }
