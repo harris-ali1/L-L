@@ -81,10 +81,10 @@ body {
 
 div.textCont::after {
     content: "|";
-    animation: blinkt 1s linear infinite;
+    animation: blinky 1s linear infinite;
 }
 
-@keyframes blinkt {
+@keyframes blinky {
     0% {
         opacity: 0;
     }
