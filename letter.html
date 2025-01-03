@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="textCont"></div>
+
+    <!-- Response container for the "Yes" and "No" buttons -->
+    <div class="response-container hidden">
+        <p class="question">Will you go out with me?</p>
+        <div class="buttons">
+            <button class="response-btn" id="yesBtn">Yes</button>
+            <button class="response-btn" id="noBtn">No</button>
+        </div>
+    </div>
+
+    <div class="song">
+        <!-- <div class="title">Tap to Play Sound </div>
+        <div class="pause" onclick="togglePlay()">🔇</div>
+        <div class="player">
+            <audio
+                src="song.mp3"
+                class="audio"
+                autoplay
+                type="audio"
+                loop -->
+            </audio>
+        </div>
+    </div>
+
+    <!-- Love letter button -->
+    <footer>
+        <a href="#" id="startText" class="center-btn" alt="">Love Letter</a>
+    </footer>
+
+    <script src="letter.js"></script>
+    <script>
+        var pause = document.querySelector(".pause");
+        var audio = document.querySelector(".audio");
+        var startText = document.getElementById("startText");
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                pause.innerHTML = "⏸";
+            } else {
+                audio.pause();
+                pause.innerHTML = "🔊";
+                pause.style.color = '#848484';
+            }
+        }
+
+        startText.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            this.classList.add("hidden"); // Hide the "Love Letter" button
+            startFromBegin(); // Call the function to start displaying text
+        });
+
+        const text = "lklk"; // Replace this with your actual text
+        const paragraph = text.split("");
+        let i = 0;
+
+        function dashOut(arr) {
+            if (i < arr.length) {
+                console.log(arr[i]);
+                document.querySelector(".textCont").textContent += arr[i];
+                i++;
+                console.log("The i count: " + i);
+                setTimeout(function () {
+                    dashOut(arr);
+                }, interval(arr[i]));
+            } else {
+                // Show the response options when the text is fully displayed
+                document.querySelector(".response-container").classList.remove("hidden");
+            }
+        }
+
+        function interval(letter) {
+            console.log(letter);
+            if (letter == ";" || letter == "." || letter == ",") {
+                return Math.floor(Math.random() * 500 + 500);
+            } else {
+                return Math.floor(Math.random() * 130 + 5);
+            }
+        }
+
+        function startFromBegin() {
+            i = 0;
+            document.querySelector(".textCont").textContent = ""; // Clear existing content
+            dashOut(paragraph);
+        }
+
+        // Handle the response buttons
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            alert("Yay! You said Yes! 💖");
+            // You can add additional functionality here, such as transitioning to another page, etc.
+        });
+
+        document.getElementById("noBtn").addEventListener("click", function() {
+            alert("Oh no! You said No. 😔");
+            // You can add additional functionality here if needed.
+        });
+    </script>
+</body>
+</html>
