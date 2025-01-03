@@ -23,9 +23,9 @@ function dashOut(arr) {
 function interval(letter) {
     console.log(letter);  // Logging each letter
     if (letter == ";" || letter == "." || letter == ",") {
-        return Math.floor(Math.random() * 100 + 100);  // Slow down for punctuation
+        return Math.floor(Math.random() * 200 + 200);  // Slow down for punctuation
     } else {
-        return Math.floor(Math.random() * 1 + 5);  // Faster for other characters
+        return Math.floor(Math.random() * 80 + 5);  // Faster for other characters
     }
 }
 
