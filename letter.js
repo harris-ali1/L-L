@@ -1,4 +1,4 @@
-const text = "Vicky, ever since I first saw you which was around the beginning of 2023, I've had a huge crush on you. I just never got the chance to properly get to know you, even in-person because you're usually hard to find on campus. I regret not shooting my shot many times but I guess I was scared. One of my New Year's resolution was to finally get it off my chest after 2 damn years. And I wanted to give you a bouquet and Love Letter, and I was gonna drop it off at your work place, but I didn't want to cause a scene at your work place like that, so I kept thinking for literally a month to come with a solution, and here I am, coding a love letter instead. I like everything about you, you're pretty yet you're smart and career driven. You're cute yet you're also intelligent and most importantly you have the cutest smile. Your personality is attractive, your smile is attractive, and everything about you is just attractive. I don't know if this will work but this was the best I could come up with for now.";
+const text = "Vicky, ever since I first saw you which was around the beginning of 2023, I've had a huge crush on you. I just never got the chance to properly get to know you, even in-person because you're usually hard to find on campus. I regret not shooting my shot many times but I guess I was scared. One of my New Year's resolution was to finally get it off my chest after 2 damn years. And I wanted to give you a bouquet and Love Letter, and I was gonna drop it off at your work place, but I didn't want to cause a scene at your work place like that, so I kept thinking for literally a month to come with a solution, and here I am, coding a love letter instead. I like everything about you, you're pretty yet you're smart and career driven. You're cute yet you're also intelligent and most importantly you have the cutest smile. Your personality is attractive, your smile is attractive, and everything about you is just attractive. I achieved everything during my time in UH, friends, popularity, good grades, but it felt incomplete because I was not able to ask you out, which is crazy because usually I have the confidence to do so. You deserve all the happiness in the world, you deserve to be treated right, and I want to be the one to be able to bring happiness into your life. I don't know if this will work but this was the best I could come up with for now. I did put in a lot of hours and thought into this so I hope it proves to be worth it. It sounds crazy doesn't it? You barely know me, I barely know you, yet I've been so crazy about you for so long. But whatever happens and has happened, I'll respect your choice of course and leave you alone if you want me to, but I am finally going to shoot my shot after 2 long years.";
 
 const paragraph = text.split("");
 let i = 0;
@@ -59,6 +59,7 @@ document.getElementById("noBtn").addEventListener("click", function() {
     submitResponse(userResponse);
 });
 
+
 // Function to send the response to the Google Form
 function submitResponse(response) {
     const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSecuENbhP4Tfv4FW_yLHK_oAcSDGPjSmqZB32nqQZy1q5rLkg/formResponse'; // Replace with your form's submission URL
@@ -78,3 +79,4 @@ function submitResponse(response) {
         console.error('Error:', error);
     });
 }
+
