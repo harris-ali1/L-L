@@ -154,3 +154,33 @@ footer > a {
     border-radius: 50%;
     animation: fireworks 1s ease-out forwards;
 }
+
+/* Default styling for text container */
+.textCont {
+    font-size: 150%;
+    margin-top: 10%;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50%;
+    height: 80%;
+    color: var(--font-color); /* Set text color */
+}
+
+/* New black container for mobile */
+.textCont-wrapper {
+    background-color: black; /* Black background for the text */
+    padding: 20px; /* Add padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    color: var(--font-color); /* Set text color */
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    .textCont-wrapper {
+        width: 90%; /* Make the container wider on mobile */
+        margin: 0 auto; /* Center the container */
+    }
+    .textCont {
+        font-size: 120%; /* Adjust the font size for smaller screens */
+    }
+}
