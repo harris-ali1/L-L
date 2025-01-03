@@ -1,4 +1,4 @@
-const text = "Vicky, ever since I first saw you which was around the beginning of 2023, I've had a huge crush on you. I just never got the chance to properly get to know you, even in-person because you're usually hard to find on campus. I regret not shooting my shot many times but I guess I was scared. One of my New Year's resolution was to finally get it off my chest after 2 damn years. And I wanted to give you a bouquet and Love Letter, and I was gonna drop it off at your work place, but I didn't want to cause a scene at your work place like that, so I kept thinking for literally a month to come with a solution, and here I am, coding a love letter instead. I like everything about you, you're pretty yet you're smart and career driven. You're cute yet you're also intelligent and most importantly you have the cutest smile. Your personality is attractive, your smile is attractive, and everything about you is just attractive. I achieved everything during my time in UH, friends, popularity, good grades, but it felt incomplete because I was not able to ask you out, which is crazy because usually I have the confidence to do so. You deserve all the happiness in the world, you deserve to be treated right, and I want to be the one to be able to bring happiness into your life. I don't know if this will work but this was the best I could come up with for now. I did put in a lot of hours and thought into this so I hope it proves to be worth it. It sounds crazy doesn't it? You barely know me, I barely know you, yet I've been so crazy about you for so long. But whatever happens and has happened, I'll respect your choice of course and leave you alone if you want me to, but I am finally going to shoot my shot after 2 long years.";
+const text = "Vicky, ever since I first saw you which was around the beginning of 2023, I've had a huge crush on you. I just never got the chance to properly get to know you, even in-person because you're usually hard to find on campus. I regret not shooting my shot many times but I guess I was scared. One of my New Year's resolution was to finally get it off my chest after 2 damn years. And I wanted to give you a bouquet and Love Letter, and I was gonna drop it off at your work place, but I didn't want to cause a scene at your work place like that, so I kept thinking for literally a month to come with a solution, and here I am, coding a love letter instead. I like everything about you, you're pretty yet you're smart and career driven. You're cute yet you're also intelligent and most importantly you have the cutest smile. Your personality is attractive, your smile is attractive, and everything about you is just attractive. I achieved everything during my time in UH, friends, popularity, good grades, but it felt incomplete because I was not able to ask you out, which is crazy because usually I have the confidence to do so. You deserve all the happiness in the world, you deserve to be treated right, and I want to be the one to be able to bring happiness into your life. I don't know if this will work but this was the best I could come up with for now. I did put in a lot of hours and thought into this so I hope it proves to be worth it. It sounds crazy doesn't it? You barely know me, I barely know you, yet I've been so crazy about you for so long, yet I know that I want to be, have to be, and can be the best version of myself for you and with you. But whatever happens and has happened, I'll respect your choice of course, and leave you alone if you want me to, but I am finally going to shoot my shot after 2 long years.";
 
 const paragraph = text.split("");
 let i = 0;
@@ -46,7 +46,7 @@ document.getElementById("startText").addEventListener("click", function (event) 
 // Handle the "Yes" button
 document.getElementById("yesBtn").addEventListener("click", function() {
     const userResponse = 'Yes';
-    alert("Yay! You said Yes! 💖");
+    alert("Gah damn! You said Yes! I'll plan a date");
     // Send the response to Google Form
     submitResponse(userResponse);
 });
@@ -54,7 +54,7 @@ document.getElementById("yesBtn").addEventListener("click", function() {
 // Handle the "No" button
 document.getElementById("noBtn").addEventListener("click", function() {
     const userResponse = 'No';
-    alert("Oh no! You said No. 😔");
+    alert("Damn!");
     // Send the response to Google Form
     submitResponse(userResponse);
 });
