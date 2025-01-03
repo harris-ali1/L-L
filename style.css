@@ -11,10 +11,14 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    color: var(--font-color);
+    color: white; /* Change text color to white */
     font-family: 'Megrim', sans-serif;
     font-size: 1.5em;
+    background-color: black; /* Set background to black */
+    padding: 20px; /* Add padding to create space around the text */
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
+
 
 .buttons {
     display: flex;
@@ -188,27 +192,3 @@ footer > a {
     }
 }
 
-/* Adjustments for MacBook screens */
-@media (min-width: 1024px) and (max-width: 1440px) {
-    .textCont-wrapper {
-        background-color: white; /* Maintain white background for MacBooks */
-        padding: 40px; /* Add more padding for larger screens */
-        width: 60%; /* Adjust the width for MacBooks */
-        margin: 0 auto; /* Center the container */
-    }
-    .textCont {
-        font-size: 140%; /* Adjust the font size for MacBooks */
-    }
-}
-
-/* Additional adjustments for iPhones in portrait mode */
-@media (max-width: 480px) {
-    .textCont-wrapper {
-        background-color: black; /* Black background for smaller iPhones */
-        padding: 15px; /* Adjust padding for smaller screens */
-        width: 90%; /* Full width on smaller iPhones */
-    }
-    .textCont {
-        font-size: 110%; /* Smaller font size for smaller screens */
-    }
-}
