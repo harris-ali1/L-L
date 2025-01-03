@@ -25,7 +25,7 @@ function interval(letter) {
     if (letter == ";" || letter == "." || letter == ",") {
         return Math.floor(Math.random() * 200 + 200);  // Slow down for punctuation
     } else {
-        return Math.floor(Math.random() * 80 + 5);  // Faster for other characters
+        return Math.floor(Math.random() * 50 + 5);  // Faster for other characters
     }
 }
 
